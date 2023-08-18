@@ -1,9 +1,10 @@
 import React from 'react';
+import addToDB from '../../utilities/fakeDB';
 
 const Cosmetic = (props) => {
     const {id,name,price} = props.cosmetic;
     const addToCart = (id) =>{
-        console.log('item added',id);
+        addToDB(id);
     }
     const addCart = () => addToCart(id);
     return (
